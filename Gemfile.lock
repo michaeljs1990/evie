@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    puma (3.6.2)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -15,6 +16,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (= 1.13.7)
+  puma (= 3.6.2)
   sinatra (= 1.4.7)
 
 BUNDLED WITH
