@@ -1,4 +1,10 @@
 ---
+# Connect to backend collins instance
+collins:
+  host: http://collins.m:9000
+  user: robot
+  pass: 42242I8KaG7V 
+
 # configuration needed for loading in genesis
 # configuration needed for tasks should all
 # be kept in conf_url.

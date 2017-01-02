@@ -1,3 +1,4 @@
+require 'collins_client'
 require_relative 'base'
 
 class Evie::Controller::Ipxe < Evie::Controller::Base
@@ -6,10 +7,12 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
   # genesis mode based on information we find
   # inside of collins.
   get '/menu' do
+    collins = get_collins_client
+
     erb :ipxe, :locals => {
       :genesis_mode => 'intake',
       :initrd_img => evie['genesis']['initrd_img_url'],
-      :vmlinuz => evie['genesis']['initrd_img_url'],
+      :vmlinuz => evie['genesis']['vmlinuz_url'],
       :conf => evie['genesis']['conf_url']}
   end
 
