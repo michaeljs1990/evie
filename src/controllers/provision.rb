@@ -1,5 +1,3 @@
-require_relative 'base'
-
 class Evie::Controller::Provision < Evie::Controller::Base
 
   get '/:asset/config.json' do

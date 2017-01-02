@@ -5,6 +5,7 @@ module Evie
   end
 
   module Controller
+    require_relative 'controllers/base'
     require_relative 'controllers/ipxe'
     require_relative 'controllers/provision'
   end

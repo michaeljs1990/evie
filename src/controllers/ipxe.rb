@@ -1,6 +1,3 @@
-require 'collins_client'
-require_relative 'base'
-
 class Evie::Controller::Ipxe < Evie::Controller::Base
 
   # load the ipxe menu config picking the
