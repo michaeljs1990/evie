@@ -1,8 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    collins-cli (0.2.10)
+      collins_auth (~> 0.1.2)
+      collins_client (~> 0.2.18)
+      colorize (~> 0.7.3)
+    collins_auth (0.1.2)
+      collins_client
+      highline
+    collins_client (0.2.19)
+      httparty (~> 0.11.0)
+    colorize (0.7.7)
+    highline (1.7.8)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    multi_json (1.12.1)
+    multi_xml (0.6.0)
     puma (3.6.2)
-    rack (1.6.4)
+    rack (1.6.5)
     rack-protection (1.5.3)
       rack
     sinatra (1.4.7)
@@ -16,6 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (= 1.13.7)
+  collins-cli (= 0.2.10)
   puma (= 3.6.2)
   sinatra (= 1.4.7)
 
