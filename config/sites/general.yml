@@ -1,0 +1,8 @@
+---
+# configuration needed for loading in genesis
+# configuration needed for tasks should all
+# be kept in conf_url.
+genesis:
+  initrd_img_url: collins.m:8080/genesis-initrd.img
+  vmlinuz_url: collins.m:8080/genesis-vmlinuz
+  conf_url: collins.m:8080/config.yml
