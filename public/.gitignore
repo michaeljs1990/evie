@@ -5,8 +5,7 @@ genesis/image/genesis-initrd.img
 genesis/image/genesis-vmlinuz
 
 # Files that are bundled into your genesis tasks
-!genesis/images/tasks/.gitkeep
-genesis/images/tasks/*
+genesis/tasks.tgz
 
 # config.yml holds all the yaml needed for configuring
 # your genesis tasks. You can store the file here if you want
