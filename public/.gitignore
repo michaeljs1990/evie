@@ -1,11 +1,18 @@
 # Files generated for genesis iPXE image
 # see documentation for how to generate your own
 # https://github.com/tumblr/genesis
-genesis-initrd.img
-genesis-vmlinuz
+genesis/image/genesis-initrd.img
+genesis/image/genesis-vmlinuz
+
+# Files that are bundled into your genesis tasks
+!genesis/images/tasks/.gitkeep
+genesis/images/tasks/*
 
 # config.yml holds all the yaml needed for configuring
 # your genesis tasks. You can store the file here if you want
 # but I like to keep all info needed for genesis tasks in one
 # repo and symlink it in.
-config.yml
+genesis/config.yml
+
+# stage2 init script for genesis
+genesis/stage2.rb
