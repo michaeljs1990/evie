@@ -17,8 +17,7 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
   # booting up into.
   def get_genesis_mode asset_tag
     collins = get_collins_client
-    # Get the first element of the array
-    asset = collins.find({'TAG' => asset_tag}).first
+    asset = collins.get(asset_tag)
      
     #  We don't know about this machine
     # so we will try to intake it.
