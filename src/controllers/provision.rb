@@ -13,10 +13,11 @@ class Evie::Controller::Provision < Evie::Controller::Base
     raise "Asset #{tag} was not found" if not asset
 
     profiles = collins.provisioning_profiles()
+    # Get the correct profile for provisioning this asset
     profile = profiles.detect { |x| x.profile == profile_id } if profiles.is_a? Array
     raise "No profile could be found for #{profile_id}" if profile.nil?
 
-    start_provisioning asset, profile
+    start_provisioning(collins, asset, profile, actor, suffix)
   end 
 
   # Provide configuration that is needed

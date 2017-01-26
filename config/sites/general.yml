@@ -12,3 +12,11 @@ genesis:
   initrd_img_url: collins.m:8080/genesis/image/genesis-initrd.img
   vmlinuz_url: collins.m:8080/genesis/image/genesis-vmlinuz
   conf_url: collins.m:8080/genesis/config.yml
+
+provisioning:
+  site: location
+  domain: terame.com
+
+  profiles:
+    devnode:
+      os: xenial
