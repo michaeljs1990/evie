@@ -2,6 +2,7 @@ module Evie
   module Helper
     require_relative 'helpers/config'
     require_relative 'helpers/collins'
+    require_relative 'helpers/provision'
   end
 
   module Controller
