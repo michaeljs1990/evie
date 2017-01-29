@@ -9,9 +9,9 @@ collins:
 # configuration needed for tasks should all
 # be kept in conf_url.
 genesis:
-  initrd_img_url: collins.m:8080/genesis/image/genesis-initrd.img
-  vmlinuz_url: collins.m:8080/genesis/image/genesis-vmlinuz
-  conf_url: collins.m:8080/genesis/config.yml
+  initrd_img_url: http://collins.m:8080/genesis/image/genesis-initrd.img
+  vmlinuz_url: http://collins.m:8080/genesis/image/genesis-vmlinuz
+  conf_url: http://collins.m:8080/genesis/config.yml
 
 provisioning:
   site: location

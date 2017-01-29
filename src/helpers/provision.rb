@@ -14,6 +14,8 @@ module Evie::Helper::Provision
     collins.set_attribute!(asset, :hostname, hostname)
     password = generate_password
     collins.set_attribute!(asset, :password, password)
+    # Reboot the asset so it will start provisioning
+    collins.power!(asset, :reboothard)
   end
 
   # Return a hostname for a given asset

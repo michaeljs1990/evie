@@ -1,4 +1,7 @@
+
 class Evie::Controller::Provision < Evie::Controller::Base
+
+  include Evie::Helper::Provision
 
   # Kick off provisioning process
   post '/start' do
@@ -17,7 +20,7 @@ class Evie::Controller::Provision < Evie::Controller::Base
     profile = profiles.detect { |x| x.profile == profile_id } if profiles.is_a? Array
     raise "No profile could be found for #{profile_id}" if profile.nil?
 
-    start_provisioning(collins, asset, profile, actor, suffix)
+    start_provision(collins, asset, profile, actor, suffix)
   end 
 
   # Provide configuration that is needed

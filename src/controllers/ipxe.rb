@@ -21,8 +21,12 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
      
     #  We don't know about this machine
     # so we will try to intake it.
-    if asset.nil?
+    if not asset
       return 'intake'
+    end
+
+    if asset.status == 'provisioning'
+      return 'provision'
     end
     
     # If we don't know what to do boot up
