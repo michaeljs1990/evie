@@ -25,7 +25,7 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
       return 'intake'
     end
 
-    if asset.status == 'provisioning'
+    if asset.status == 'Provisioning'
       return 'provision'
     end
     
