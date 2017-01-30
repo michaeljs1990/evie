@@ -26,7 +26,7 @@ class Evie::Controller::Provision < Evie::Controller::Base
   # Provide configuration that is needed
   # for genesis processes. All that business
   # logic yeah.
-  get '/:asset/config' do
+  get '/config/:asset' do
     return params['asset']
   end
 
