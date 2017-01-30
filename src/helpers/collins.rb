@@ -14,9 +14,9 @@ module Evie::Helper::Collins
     host = evie['collins']['host'] 
     
     return Collins::Client.new config = {
-      :username => user, 
-      :password => pass, 
-      :host => host}
+      username: user, 
+      password: pass, 
+      host: host}
   end
 
 end
