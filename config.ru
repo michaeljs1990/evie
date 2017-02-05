@@ -15,8 +15,19 @@ if not File.exist?(ENV['EVIE_CONFIG'])
   raise ArgumentError, "#{ENV['EVIE_CONFIG']} doesn't exist or couldn't be opened."
 end
 
+
+if ENV['PROFILE_CONFIG'].nil?
+  raise ArgumentError, 'PROFILE_CONFIG env is not defined.'
+end
+
+if not File.exist?(ENV['PROFILE_CONFIG'])
+  raise ArgumentError, "#{ENV['PROFILE_CONFIG']} doesn't exist or couldn't be opened."
+end
+
+
 use Rack::Config do |env|
   env['evie'] = YAML::load(File.open(ENV['EVIE_CONFIG']))
+  env['profile'] = YAML::load(File.open(ENV['PROFILE_CONFIG']))
 end
 
 # Application Routes

@@ -11,6 +11,7 @@ GEM
     collins_client (0.2.19)
       httparty (~> 0.11.0)
     colorize (0.7.7)
+    deep_merge (1.1.1)
     highline (1.7.8)
     httparty (0.11.0)
       multi_json (~> 1.0)
@@ -33,6 +34,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (= 1.13.7)
   collins-cli (= 0.2.10)
+  deep_merge (= 1.1.1)
   puma (= 3.6.2)
   sinatra (= 1.4.7)
 

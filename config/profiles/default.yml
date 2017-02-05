@@ -1,0 +1,7 @@
+# Config that is generally the same across
+# multiple different node classes.
+defaults:
+  os:
+    url: http://mirror.internode.on.net/pub/ubuntu/ubuntu/
+    distro: xenial
+    arch: amd64

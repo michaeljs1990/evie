@@ -1,7 +1,9 @@
+require 'json'
 
 class Evie::Controller::Provision < Evie::Controller::Base
 
   include Evie::Helper::Provision
+  include Evie::Helper::Profile
 
   # Kick off provisioning process
   post '/start' do
@@ -24,10 +26,19 @@ class Evie::Controller::Provision < Evie::Controller::Base
   end 
 
   # Provide configuration that is needed
-  # for genesis processes. All that business
-  # logic yeah.
+  # for genesis such as type of OS that should
+  # be installed and what puppet environment 
+  # should be setup.
   get '/config/:asset' do
-    return params['asset']
+    collins = get_collins_client
+
+    tag = params['asset']
+
+    asset = collins.get(tag) # returns false on failure not nil
+    raise "Asset #{tag} was not found" if not asset
+
+    content_type :json
+    (get_profile asset).to_json
   end
 
 end

@@ -7,4 +7,11 @@ module Evie::Helper::Config
     return env['evie']
   end
 
+  # Configuration used during the provisioning
+  # process such as what OS should be installed
+  # and so on.
+  def profile
+    return env['profile']
+  end
+
 end
