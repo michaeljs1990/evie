@@ -3,5 +3,6 @@
 defaults:
   os:
     url: http://mirror.internode.on.net/pub/ubuntu/ubuntu/
+    flavor: ubuntu
     distro: xenial
     arch: amd64
