@@ -9,11 +9,12 @@ module Evie::Helper::Provision
   def start_provision collins, asset, profile, actor, suffix
     msg = "Evie: Provisioning #{asset.tag} as profile #{profile.profile}"
     collins.set_status!(asset, :provisioning, msg, :running)
-    # Set the hostname for this computer
     hostname = generate_hostname(asset.tag, profile, suffix)
     collins.set_attribute!(asset, :hostname, hostname)
     password = generate_password
     collins.set_attribute!(asset, :password, password)
+    ip = generate_ip collins
+    # collins.set_attribute!(asset, :ip, ip)
     # Start asset for provisioning
     power_on_asset(collins, asset)
   end
@@ -39,6 +40,10 @@ module Evie::Helper::Provision
     rescue Collins::RequestError
       collins.power!(asset, :poweron)
     end
+  end
+
+  def generate_ip collins
+    p collins.ipaddress_pools
   end
 
 end
