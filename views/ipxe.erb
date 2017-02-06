@@ -9,6 +9,7 @@ item
 item --gap Non-destructive Genesis Operations: 
 item --key 2 intake    2: Intake - Register with Collins (if new asset) and run machine setup
 item --key 3 hw_report 3: Hardware Report - Send new hardware report to Collins
+item --key 4 provision 4: Provision - Install new OS and clear disk
 
 choose --default <%= genesis_mode %> --timeout 10000 target && goto ${target}
 
@@ -19,6 +20,7 @@ exit
 :util
 :intake
 :hw_report
+:provision
 initrd <%= initrd_img %>
 kernel <%= vmlinuz %> rootflags=loop root=live:/genesis.iso rootfstype=auto ro liveimg vga=791 rd_NO_LUKS rd_NO_MD rd_NO_DM console=tty0 console=ttyS1,115200 GENESIS_MODE=${target} GENESIS_CONF_URL=<%= conf %> ""
 boot
