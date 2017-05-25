@@ -22,16 +22,16 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
     #  We don't know about this machine
     # so we will try to intake it.
     if not asset
-      return 'intake'
+      return :intake
     end
 
     if asset.status == 'Provisioning'
-      return 'provision'
+      return :provision
     end
     
     # If we don't know what to do boot up
     # genesis in util mode for poking around
-    return 'util'
+    return :util
   end
 
 end

@@ -27,7 +27,7 @@ class Evie::Controller::Provision < Evie::Controller::Base
 
   # Provide configuration that is needed
   # for genesis such as type of OS that should
-  # be installed and what puppet environment 
+  # be installed and what puppet environment
   # should be setup.
   get '/config/:asset' do
     collins = get_collins_client
