@@ -13,8 +13,7 @@ module Evie::Helper::Provision
     collins.set_attribute!(asset, :hostname, hostname)
     password = generate_password
     collins.set_attribute!(asset, :password, password)
-    ip = generate_ip collins
-    # collins.set_attribute!(asset, :ip, ip)
+    generate_ip(collins, asset)
     # Start asset for provisioning
     power_on_asset(collins, asset)
   end
@@ -42,8 +41,11 @@ module Evie::Helper::Provision
     end
   end
 
-  def generate_ip collins
-    p collins.ipaddress_pools
+  # This should be way more smart about handling allocations
+  # but it works for right now.
+  def generate_ip collins, asset
+    num = asset.RACK_POSITION.split("-")[1]
+    collins.ipaddress_allocate!(asset.tag, "RACK-#{num}")
   end
 
 end
