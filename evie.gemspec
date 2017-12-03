@@ -1,3 +1,5 @@
+require 'date'
+
 Gem::Specification.new do |gem|
   gem.name    = 'evie'
   gem.version = '0.1'
