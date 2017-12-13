@@ -1,7 +1,7 @@
 ---
 # Connect to backend collins instance
 collins:
-  host: http://collins.m:9000
+  host: http://10.0.0.5:9000
   user: robot
   pass: 42242I8KaG7V 
 
