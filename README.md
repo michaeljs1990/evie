@@ -22,3 +22,19 @@ in order to install puma... :(
 ```
 apt install libssl-dev build-essentials
 ```
+
+## Prime Public Folder
+
+To setup the public folder you will need the following files. You can build
+the image from the tumblr/genesis repo and the stage2.rb and config.yml
+can me found in michalejs1990/genesis-tasks config.yml is the collins.yml
+file in that folder and stage2.rb is the stage2/init.rb file. The repo
+has directions for how to make the tasks.tgz file.
+
+```
+./genesis/image/genesis-initrd.img
+./genesis/image/genesis-vmlinuz
+./genesis/stage2.rb
+./genesis/config.yml
+./genesis/tasks.tgz
+```
