@@ -13,3 +13,12 @@ export EVIE_CONFIG=/home/michael/evie/config/sites/general.yml
 export PROFILE_CONFIG=/home/michael/evie/config/profiles/default.yml
 bundle exec puma
 ```
+
+## Bundle Install
+
+You might need to install the following two packages on your system
+in order to install puma... :(
+
+```
+apt install libssl-dev build-essentials
+```
