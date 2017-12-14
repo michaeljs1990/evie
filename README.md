@@ -9,8 +9,8 @@ get your environment all set up.
 
 ```
 bundle install
-export EVIE_CONFIG=/home/michael/evie/config/sites/general.yml
-export PROFILE_CONFIG=/home/michael/evie/config/profiles/default.yml
+export EVIE_CONFIG=`pwd`/evie/config/sites/general.yml
+export PROFILE_CONFIG=`pwd`/evie/config/profiles/default.yml
 bundle exec puma
 ```
 
