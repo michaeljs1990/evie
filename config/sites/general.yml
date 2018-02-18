@@ -1,7 +1,7 @@
 ---
 # Connect to backend collins instance
 collins:
-  host: http://10.0.0.5:9000
+  host: http://192.168.2.4:9000
   user: robot
   pass: 42242I8KaG7V 
 
@@ -9,9 +9,9 @@ collins:
 # configuration needed for tasks should all
 # be kept in conf_url.
 genesis:
-  initrd_img_url: http://10.0.0.5:8080/genesis/image/genesis-initrd.img
-  vmlinuz_url: http://10.0.0.5:8080/genesis/image/genesis-vmlinuz
-  conf_url: http://10.0.0.5:8080/genesis/config.yml
+  initrd_img_url: http://192.168.2.4:8080/genesis/image/genesis-initrd.img
+  vmlinuz_url: http://192.168.2.4:8080/genesis/image/genesis-vmlinuz
+  conf_url: http://192.168.2.4:8080/genesis/config.yml
 
 provisioning:
   site: unknown
