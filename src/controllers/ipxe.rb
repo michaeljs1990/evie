@@ -34,8 +34,10 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
     # so we will try to intake it.
     if not asset
       :intake
-    elsif  asset.status == 'Provisioning'
+    elsif asset.status == 'Provisioning'
       :provision
+    elsif asset.status == 'Provisioned' or asset.status == 'Allocated'
+      :local
     else
       :util
     end
