@@ -1,1 +1,4 @@
 ---
+provisioning:
+  site: pit1
+  domain: terame.com

@@ -10,6 +10,7 @@ module Evie
     require_relative 'controllers/base'
     require_relative 'controllers/ipxe'
     require_relative 'controllers/provision'
+    require_relative 'controllers/config'
   end
 end
 
