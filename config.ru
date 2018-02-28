@@ -33,4 +33,4 @@ end
 # Application Routes
 map('/provision') { run Evie::Controller::Provision }
 map('/ipxe') { run Evie::Controller::Ipxe }
-map('/') { run Evie::Controller::Config }
+map('/evie') { run Evie::Controller::Config }

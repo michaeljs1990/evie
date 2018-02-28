@@ -45,6 +45,7 @@ module Evie::Helper::Provision
   # but it works for right now.
   def generate_ip collins, asset
     num = asset.RACK_POSITION.split("-")[1]
+    collins.ipaddress_delete!(asset.tag, "RACK-#{num}")
     collins.ipaddress_allocate!(asset.tag, "RACK-#{num}")
   end
 

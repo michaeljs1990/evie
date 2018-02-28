@@ -37,7 +37,7 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
     elsif asset.status == 'Provisioning'
       :provision
     elsif asset.status == 'Provisioned' or asset.status == 'Allocated'
-      :util
+      :local
     else
       :util
     end

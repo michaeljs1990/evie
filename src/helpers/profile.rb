@@ -16,7 +16,15 @@ module Evie::Helper::Profile
       return defaults.deep_merge! nodeclass
     end
 
+    token = get_token asset.NODECLASS
+    defaults['vault_token'] = token
+
     return defaults 
+  end
+
+  # Return a static token for testing.
+  def get_token nodeclass
+    'd8b5320c-d230-1607-8746-1eda271eeed3'
   end
 
 end
