@@ -1,10 +1,16 @@
 # Config that is generally the same across
 # multiple different node classes.
 defaults:
+  collins:
+    host: http://192.168.2.4:9000
+    username: michael
+    password: test
+
   puppet:
     xenial:
       repo: https://github.com/michaeljs1990/puppet.git
       path: /etc/puppetlabs/code/environments/production
+
   os:
     url: http://mirror.internode.on.net/pub/ubuntu/ubuntu/
     flavor: ubuntu
