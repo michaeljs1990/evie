@@ -12,7 +12,7 @@ defaults:
       path: /etc/puppetlabs/code/environments/production
 
   os:
-    url: http://mirror.internode.on.net/pub/ubuntu/ubuntu/
+    url: http://archive.ubuntu.com/ubuntu/
     flavor: ubuntu
-    distro: xenial
+    distro: bionic
     arch: amd64
