@@ -6,6 +6,11 @@ require_relative 'src/evie.rb'
 # public which seems to be off by default with Rack
 run Rack::Directory.new("./public")
 
+# https://github.com/hashicorp/vault-ruby
+if ENV['VAULT_TOKEN'].nil?
+  raise ArgumentError, 'VAULT_TOKEN env is not defined.'
+end
+
 # http://www.rubydoc.info/github/rack/rack/Rack/Config
 if ENV['EVIE_CONFIG'].nil?
   raise ArgumentError, 'EVIE_CONFIG env is not defined.'

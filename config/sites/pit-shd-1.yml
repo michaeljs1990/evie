@@ -1,4 +1,8 @@
 ---
+vault:
+  host: http://192.168.2.4:8200
+  role: auth/approle/role
+
 provisioning:
   site: pit1
   domain: terame.com
