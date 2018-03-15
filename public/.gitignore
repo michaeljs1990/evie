@@ -2,7 +2,9 @@
 # see documentation for how to generate your own
 # https://github.com/tumblr/genesis
 genesis/image/genesis-initrd.img
+genesis/image/genesis-initrd.img.bak
 genesis/image/genesis-vmlinuz
+genesis/image/genesis-vmlinuz.bak
 
 # Files that are bundled into your genesis tasks
 genesis/tasks.tgz

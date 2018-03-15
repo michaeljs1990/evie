@@ -11,6 +11,10 @@ defaults:
       repo: https://github.com/michaeljs1990/puppet.git
       path: /etc/puppetlabs/code/environments/production
 
+    bionic:
+      repo: https://github.com/michaeljs1990/puppet.git
+      path: /etc/puppetlabs/code/environments/production
+
   os:
     url: http://archive.ubuntu.com/ubuntu/
     flavor: ubuntu

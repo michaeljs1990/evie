@@ -14,10 +14,11 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('rake', '12.0.0')
   gem.add_dependency('sinatra', '1.4.7')
-  gem.add_dependency('bundler', '1.13.7')
+  gem.add_dependency('bundler', '>= 1.13.7')
   gem.add_dependency('puma', '3.6.2')
   gem.add_dependency('collins-cli', '0.2.10')
   gem.add_dependency('deep_merge', '1.1.1')
+  gem.add_dependency('vault', '0.10.1')
 
   gem.add_development_dependency('rspec', [">= 2.0.0"])
 
