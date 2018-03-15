@@ -1,5 +1,4 @@
 require 'vault'
-require 'pp'
 
 module Evie::Helper::Vault
 
