@@ -28,11 +28,18 @@ class Evie::Controller::Ipxe < Evie::Controller::Base
   # Figure out what mode genesis should be
   # booting up into.
   def get_genesis_mode asset_tag
-    asset = @collins.get(asset_tag)
+    begin
+      asset = @collins.get(asset_tag)
+    rescue => e
+      error = true
+      puts e.message
+    end
      
     #  We don't know about this machine
     # so we will try to intake it.
-    if not asset
+    if error
+      :util
+    elsif not asset
       :intake
     elsif asset.status == 'Provisioning'
       :provision
